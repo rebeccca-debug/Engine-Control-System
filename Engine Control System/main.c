@@ -7,7 +7,7 @@ Brake : PC1
 
 */
 
-#define		CONTROL_PORT		GPIOA
+#define	CONTROL_PORT			GPIOA
 #define BRAKE_AND_GAS_PORT		GPIOC
 
 #define ENG_CONTROL			(1U<<0)
