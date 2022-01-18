@@ -7,15 +7,15 @@ Brake : PC1
 
 */
 
-#define		CONTROL_PORT				GPIOA
+#define		CONTROL_PORT		GPIOA
 #define BRAKE_AND_GAS_PORT		GPIOC
 
-#define ENG_CONTROL						(1U<<0)
-#define ENG_BRAKE							(1U<<1)
-#define ENG_GAS								(1U<<0)
+#define ENG_CONTROL			(1U<<0)
+#define ENG_BRAKE			(1U<<1)
+#define ENG_GAS				(1U<<0)
 
 #define ENG_BRAKE_MODE_BIT		(1U<<2)
-#define ENG_GAS_MODE_BIT			(1U<<1)
+#define ENG_GAS_MODE_BIT		(1U<<1)
 
 struct State {
 	
@@ -27,8 +27,8 @@ struct State {
 
 typedef const struct State stateType;
 
-#define stop		&STATE_MACHINE[0]
-#define go			&STATE_MACHINE[1]
+#define stop				&STATE_MACHINE[0]
+#define go				&STATE_MACHINE[1]
 
 stateType STATE_MACHINE[2]={
 	{{2,0},100,{stop,go}},
@@ -43,7 +43,7 @@ uint32_t system_input;
 
 int main(void){
 	
-	//TODO : Initialize hardware then set initial state
+	//Initialize hardware then set initial state
 	EngineSystemInit();
 	
 	statePtr = stop;
